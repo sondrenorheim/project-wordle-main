@@ -220,6 +220,75 @@ h1 {
 }
 
 /*
+  Keyboard styles
+*/
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 16px;
+}
+
+.keyboard-row {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.keyboard-key {
+  min-width: 32px;
+  padding: 12px 8px;
+  background: var(--color-gray-700);
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-gray-100);
+  user-select: none;
+}
+
+.keyboard-key.correct {
+  background: var(--color-success);
+  color: white;
+}
+
+.keyboard-key.misplaced {
+  background: var(--color-warning);
+  color: white;
+}
+
+.keyboard-key.incorrect {
+  background: var(--color-gray-300);
+  color: white;
+}
+
+.keyboard-key.unused {
+  background: var(--color-gray-700);
+  color: var(--color-gray-100);
+}
+
+.restart-button {
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: white;
+  color: var(--color-gray-100);
+  border: 2px solid white;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 100ms;
+}
+
+.restart-button:hover {
+  transform: scale(1.05);
+}
+
+.restart-button:active {
+  transform: scale(0.95);
+}
+
+/*
   Keyframe animations
 */
 @keyframes slideUp {
